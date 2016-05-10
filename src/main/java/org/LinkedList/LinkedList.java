@@ -5,4 +5,11 @@ package org.LinkedList;
  */
 public interface LinkedList {
     int getSize();
+    int addFirst(int value);
+    int addLast(int value);
+    int removeFirst();
+    int removeLast();
+    int getFirst();
+    int getLast();
+    void clear();
 }
