@@ -110,4 +110,74 @@ public class LinkedListImpl implements LinkedList {
         _head= _tail= null;
         _count= 0;
     }
+
+    @Override
+    public void reverseUsingLoop(){
+        Node _prev= null, _current= _head, _next;
+        while (_current!=null){
+            _next= _current.getNext();
+            _current.setNext(_prev);
+            _prev= _current;
+            _current= _next;
+        }
+
+        Node _temp= _head;
+        _head= _tail;
+        _tail= _temp;
+
+    }
+
+    @Override
+    public void reverseUsingRecursion(){
+        reverseList(null, _head);
+
+        Node _temp= _head;
+        _head= _tail;
+        _tail= _temp;
+    }
+
+    private void reverseList(Node _prev, Node _current){
+        if(_current==null){
+            return;
+        }
+
+        reverseList(_current, _current.getNext());
+        _current.setNext(_prev);
+    }
+
+    @Override
+    public void iterate(){
+        Node _temp= _head;
+        while (_temp!=null){
+            System.out.println(_temp.getValue());
+            _temp= _temp.getNext();
+        }
+    }
+
+    @Override
+    public int deleteKNode(int K){
+        int index= 0;
+        Node _temp= _head;
+        Node _prev= null;
+        while (index!=K && _temp!=null){
+            _prev= _temp;
+            _temp= _temp.getNext();
+            index++;
+        }
+
+        if(K==0){
+            return removeFirst();
+        }
+
+        if(K==_count){
+            return removeLast();
+        }
+
+
+        _prev.setNext(_temp.getNext());
+        int value= _temp.getValue();
+        _count--;
+        return value;
+    }
+
 }

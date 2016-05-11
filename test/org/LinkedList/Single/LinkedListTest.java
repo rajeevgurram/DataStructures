@@ -86,4 +86,35 @@ public class LinkedListTest extends TestCase{
         assertEquals(0, _list.getSize());
 
     }
+
+    public void testReverseUsingLoops(){
+        for(int i=0; i<10; i++){
+            assertEquals(i, _list.addLast(i));
+        }
+
+        _list.reverseUsingLoop();
+        _list.iterate();
+
+    }
+
+    public void testReverseUsingRecursion(){
+        for(int i=0; i<10; i++){
+            assertEquals(i, _list.addLast(i));
+        }
+
+        _list.reverseUsingRecursion();
+        _list.iterate();
+    }
+
+    public void testDeleteKNode(){
+        for(int i=0; i<10; i++){
+            assertEquals(i, _list.addLast(i));
+        }
+
+        for(int i=0; i<10; i++){
+            assertNotNull(_list.deleteKNode(i));
+        }
+
+        _list.iterate();
+    }
 }

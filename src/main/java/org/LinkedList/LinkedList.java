@@ -12,4 +12,8 @@ public interface LinkedList {
     int getFirst();
     int getLast();
     void clear();
+    void reverseUsingLoop();
+    void reverseUsingRecursion();
+    void iterate();
+    int deleteKNode(int K);
 }
