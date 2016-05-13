@@ -180,4 +180,24 @@ public class LinkedListImpl implements LinkedList {
         return value;
     }
 
+    @Override
+    public int FourthNodeFromEnd(){
+        Node _temp= _head, _temp2= _head;
+
+        int n= 0;
+
+        while(_temp2!=null && n< 4){
+            _temp2= _temp2.getNext();
+            n++;
+        }
+
+        while(_temp2!=null){
+            _temp = _temp.getNext();
+            _temp2 = _temp2.getNext();
+        }
+
+        return _temp.getValue();
+
+    }
+
 }

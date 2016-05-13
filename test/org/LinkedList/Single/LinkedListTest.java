@@ -117,4 +117,12 @@ public class LinkedListTest extends TestCase{
 
         _list.iterate();
     }
+
+    public void testFourthNodeFromEnd(){
+        for(int i=0; i<2; i++){
+            assertEquals(i, _list.addLast(i));
+        }
+
+        assertEquals(0 , _list.FourthNodeFromEnd());
+    }
 }

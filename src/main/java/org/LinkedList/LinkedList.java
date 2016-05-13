@@ -16,4 +16,5 @@ public interface LinkedList {
     void reverseUsingRecursion();
     void iterate();
     int deleteKNode(int K);
+    int FourthNodeFromEnd();
 }
