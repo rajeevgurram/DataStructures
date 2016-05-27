@@ -2,6 +2,8 @@ package org.LinkedList.Single;
 
 
 import junit.framework.TestCase;
+import org.LinkedList.Double.*;
+import org.LinkedList.Double.LinkedListImpl;
 import org.LinkedList.LinkedList;
 import org.junit.Test;
 
@@ -12,6 +14,7 @@ public class LinkedListTest extends TestCase{
     private LinkedList _list;
 
     public LinkedListTest(){
+        //_list= new LinkedListImpl();
         _list= new LinkedListImpl();
     }
 
@@ -111,7 +114,7 @@ public class LinkedListTest extends TestCase{
             assertEquals(i, _list.addLast(i));
         }
 
-        for(int i=0; i<10; i++){
+        for(int i=1; i<8; i++){
             assertNotNull(_list.deleteKNode(i));
         }
 

@@ -115,6 +115,7 @@ public class LinkedListImpl implements LinkedList {
         Node _temp= _head;
         while(_temp!=null){
             System.out.println(_temp.getVlaue());
+            _temp= _temp.getNext();
         }
     }
 
@@ -127,8 +128,8 @@ public class LinkedListImpl implements LinkedList {
 
         int value= _temp.getVlaue();
         _temp.getPrev().setNext(_temp.getNext());
-        _temp.setPrev(null);
-        _temp.setNext(null);
+//        _temp.setPrev(null);
+//        _temp.setNext(null);
         return value;
     }
 
