@@ -10,4 +10,5 @@ public interface BinaryTree {
     void inOrderTraversal();
     void postOrderTraversal();
     void levelOrderTraversal();
+    boolean search(int value);
 }

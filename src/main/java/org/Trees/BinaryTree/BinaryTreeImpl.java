@@ -112,4 +112,27 @@ public class BinaryTreeImpl implements BinaryTree {
             System.out.println(current.getValue());
         }
     }
+
+    public boolean search(int value){
+        if(_root!=null){
+            return search(_root, value);
+        }
+        return false;
+    }
+
+    private boolean search(Node root, int value){
+        while(root != null){
+            int currentValue= root.getValue();
+            if(currentValue > value){
+                root= root.getLeft();
+            }
+            else if(currentValue < value){
+                root= root.getRight();
+            }
+            else if(currentValue == value){
+                return true;
+            }
+        }
+        return false;
+    }
 }
