@@ -6,4 +6,8 @@ package org.Trees.BinaryTree;
 public interface BinaryTree {
     int size();
     int addItem(int data);
+    void preOrderTraversal();
+    void inOrderTraversal();
+    void postOrderTraversal();
+    void levelOrderTraversal();
 }
