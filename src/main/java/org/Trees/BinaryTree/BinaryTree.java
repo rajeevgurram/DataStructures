@@ -14,4 +14,5 @@ public interface BinaryTree {
     boolean delete(int value);
     void balanceTree();
     int commonAncestor(int first, int second);
+    //Given a binary tree and a sum, find all the paths that leads to the sum.
 }
