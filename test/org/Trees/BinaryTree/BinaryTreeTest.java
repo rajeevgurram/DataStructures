@@ -164,5 +164,16 @@ public class BinaryTreeTest {
         tree.balanceTree();
         tree.inOrderTraversal();
     }
+
+    @Test
+    public void testCommonAncestor(){
+        BinaryTree tree= new BinaryTreeImpl();
+        for(int i=0; i<10; i++){
+            tree.addItem(i);
+        }
+        tree.balanceTree();
+        System.out.println(tree.commonAncestor(1, 2));
+
+    }
 }
 

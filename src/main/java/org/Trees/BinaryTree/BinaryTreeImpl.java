@@ -230,4 +230,25 @@ public class BinaryTreeImpl implements BinaryTree {
             inOrder(root.getRight(), data);
         }
     }
+
+    public int commonAncestor(int first, int second){
+        if(_root!=null){
+            return commonAncestor(_root, first, second);
+        }
+        return -1;
+    }
+
+    private int commonAncestor(Node root, int first, int second){
+        int currentValue= root.getValue();
+        if(currentValue > first && currentValue < second){
+            return currentValue;
+        }
+        else if(currentValue < first){
+            return commonAncestor(root.getRight(), first, second);
+        }
+        else if(currentValue > second){
+            return commonAncestor(root.getLeft(), first, second);
+        }
+        return -1;
+    }
 }

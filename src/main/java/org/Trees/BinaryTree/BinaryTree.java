@@ -13,4 +13,5 @@ public interface BinaryTree {
     boolean search(int value);
     boolean delete(int value);
     void balanceTree();
+    int commonAncestor(int first, int second);
 }
