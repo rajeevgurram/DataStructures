@@ -129,4 +129,40 @@ public class BinaryTreeTest {
         Assert.assertEquals(tree.search(50), false);
         Assert.assertEquals(tree.search(-1), false);
     }
+
+    @Test
+    public void testDelete(){
+        BinaryTree tree= new BinaryTreeImpl();
+
+        tree.addItem(10);
+        tree.addItem(5);
+        tree.addItem(15);
+        tree.addItem(3);
+        tree.addItem(13);
+        tree.addItem(1);
+        tree.addItem(11);
+        tree.addItem(1);
+        tree.addItem(19);
+        tree.addItem(0);
+        tree.addItem(20);
+        tree.addItem(7);
+        tree.addItem(17);
+        tree.addItem(9);
+
+        tree.delete(3);
+        tree.delete(10);
+        tree.delete(20);
+        tree.inOrderTraversal();
+    }
+
+    @Test
+    public void testBalanceTree(){
+        BinaryTree tree= new BinaryTreeImpl();
+        for(int i=0; i<10; i++){
+            tree.addItem(i);
+        }
+        tree.balanceTree();
+        tree.inOrderTraversal();
+    }
 }
+

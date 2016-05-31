@@ -11,4 +11,6 @@ public interface BinaryTree {
     void postOrderTraversal();
     void levelOrderTraversal();
     boolean search(int value);
+    boolean delete(int value);
+    void balanceTree();
 }
