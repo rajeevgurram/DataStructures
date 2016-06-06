@@ -4,7 +4,7 @@ package org.Hash.Table;
  * Created by rajeevgurram on 6/5/16.
  */
 public class HashTableImpl implements HashTable{
-    private static final int TABLE_SIZE= 3;
+    private static final int TABLE_SIZE= 300;
     private Node[] table;
     private int count= 0;
 
@@ -104,6 +104,21 @@ public class HashTableImpl implements HashTable{
                     while (next != null) {
                         System.out.println(next.getValue());
                         next = next.getNext();
+                    }
+                }
+            }
+        }
+    }
+
+    public void getKeys(){
+        if(table!=null){
+            for(int i=0; i<TABLE_SIZE; i++){
+                Node temp= table[i];
+                if(temp!=null){
+                    System.out.println(temp.getKey());
+                    while(temp.getNext()!=null){
+                        temp= temp.getNext();
+                        System.out.println(temp.getKey());
                     }
                 }
             }

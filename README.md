@@ -6,7 +6,7 @@ TODO:
     //Given a binary tree and a sum, find all the paths that leads to the sum.
     //I had two questions: One was the Djikstra's shortest path algorithm and the second was to find the missing element in the array.
     //How can you sort an array and remove duplicate entries. A few questions on Big O efficiency. Questions on memory management.
-    //Implement a HashMap. Try to stick to the syntax of the language instead of writing pseudo code.
+    * //Implement a HashMap. Try to stick to the syntax of the language instead of writing pseudo code.
     //Given an array with sorted rows and columns, find the position of given target value in array?
     //Write the object oriented design for a car. Implement its acceleration and deacceleration
     //OOP design, hash maps and hash table related questions, bit manipulation, difference between various data structures and why are they good.

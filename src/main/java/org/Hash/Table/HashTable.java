@@ -9,4 +9,5 @@ public interface HashTable {
     int getSize();
     void remove(String key);
     void iterate();
+    void getKeys();
 }

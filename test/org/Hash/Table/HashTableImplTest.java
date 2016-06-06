@@ -21,5 +21,7 @@ public class HashTableImplTest {
         table.remove("mno");
         table.iterate();
 
+        table.getKeys();
+
     }
 }
